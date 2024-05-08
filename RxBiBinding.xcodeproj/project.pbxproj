@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		30A70931216E12AE0056D6A8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A7092F216E12AE0056D6A8 /* RxSwift.framework */; };
 		30A70932216E12AE0056D6A8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A70930216E12AE0056D6A8 /* RxCocoa.framework */; };
+		90132C994AB0E5660984AA5C /* Pods_RxBiBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5B6AE62D821988C38C37A7 /* Pods_RxBiBinding.framework */; };
 		D911417E21688EBC007FB459 /* RxBiBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D911417421688EBC007FB459 /* RxBiBinding.framework */; };
 		D911418321688EBC007FB459 /* RxBiBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D911418221688EBC007FB459 /* RxBiBindingTests.swift */; };
 		D911418521688EBC007FB459 /* RxBiBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = D911417721688EBC007FB459 /* RxBiBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,8 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C5B6AE62D821988C38C37A7 /* Pods_RxBiBinding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxBiBinding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A7092F216E12AE0056D6A8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		30A70930216E12AE0056D6A8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		B14A3D6B6BF0EC3B9A1A7CDD /* Pods-RxBiBinding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxBiBinding.release.xcconfig"; path = "Target Support Files/Pods-RxBiBinding/Pods-RxBiBinding.release.xcconfig"; sourceTree = "<group>"; };
+		B1665B0D1F428EE14539A22A /* Pods-RxBiBinding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxBiBinding.debug.xcconfig"; path = "Target Support Files/Pods-RxBiBinding/Pods-RxBiBinding.debug.xcconfig"; sourceTree = "<group>"; };
 		D911417421688EBC007FB459 /* RxBiBinding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxBiBinding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D911417721688EBC007FB459 /* RxBiBinding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxBiBinding.h; sourceTree = "<group>"; };
 		D911417821688EBC007FB459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			files = (
 				30A70931216E12AE0056D6A8 /* RxSwift.framework in Frameworks */,
 				30A70932216E12AE0056D6A8 /* RxCocoa.framework in Frameworks */,
+				90132C994AB0E5660984AA5C /* Pods_RxBiBinding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,8 +75,19 @@
 			children = (
 				30A70930216E12AE0056D6A8 /* RxCocoa.framework */,
 				30A7092F216E12AE0056D6A8 /* RxSwift.framework */,
+				0C5B6AE62D821988C38C37A7 /* Pods_RxBiBinding.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		602F9614669FA45F4CDDFAFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1665B0D1F428EE14539A22A /* Pods-RxBiBinding.debug.xcconfig */,
+				B14A3D6B6BF0EC3B9A1A7CDD /* Pods-RxBiBinding.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		D911416A21688EBB007FB459 = {
@@ -81,6 +97,7 @@
 				D911418121688EBC007FB459 /* RxBiBindingTests */,
 				D911417521688EBC007FB459 /* Products */,
 				30A7092E216E12AE0056D6A8 /* Frameworks */,
+				602F9614669FA45F4CDDFAFD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D911418821688EBC007FB459 /* Build configuration list for PBXNativeTarget "RxBiBinding" */;
 			buildPhases = (
+				4FAB089127BC9B3B466AFB9F /* [CP] Check Pods Manifest.lock */,
 				D911416F21688EBC007FB459 /* Headers */,
 				D911417021688EBC007FB459 /* Sources */,
 				D911417121688EBC007FB459 /* Frameworks */,
@@ -244,6 +262,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		4FAB089127BC9B3B466AFB9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxBiBinding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -404,6 +444,7 @@
 		};
 		D911418921688EBC007FB459 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1665B0D1F428EE14539A22A /* Pods-RxBiBinding.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -437,6 +478,7 @@
 		};
 		D911418A21688EBC007FB459 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14A3D6B6BF0EC3B9A1A7CDD /* Pods-RxBiBinding.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
